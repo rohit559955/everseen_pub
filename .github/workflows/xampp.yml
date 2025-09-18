@@ -22,8 +22,8 @@ jobs:
       - name: Install XAMPP on server
         uses: appleboy/ssh-action@v0.1.10
         with:
-          host: ${{ secrets.SERVER_SSH_IP }}
-          username: ${{ secrets.SERVER_SSH_USER }}
+          host: ${{ github.event.inputs.server }}
+          username: ${{ github.event.inputs.user }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
             echo "Updating package lists and installing curl..."
