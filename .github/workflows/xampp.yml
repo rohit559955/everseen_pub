@@ -13,7 +13,6 @@ on:
 jobs:
   install-xampp:
     runs-on: self-hosted
-    environment: development 
 
     steps:
       - name: Checkout repository
